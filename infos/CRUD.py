@@ -24,10 +24,9 @@ class CRUD:
     def adicionar_disciplinas_optativas(self, nome_campus, nome_disciplina, horas):
         campus = self.buscar_campus(nome_campus)
         if campus:
-            campus_alvo = next((c for c in campus if c.nome == nome_campus), None)
-            if campus_alvo:
+            if campus:
                 nova_disciplina = Disciplinas(nome_disciplina, horas)
-                campus_alvo.adicionar_disciplinas_optativas(nova_disciplina)
+                campus.adicionar_disciplinas_optativas(nova_disciplina)
             print(f"✅ Disciplina '{nome_disciplina}' adicionada ao Campus '{nome_campus}'.")
         else:
             print("❌ Curso não encontrado neste campus.")
