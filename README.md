@@ -4,7 +4,7 @@
 
 Esse projeto é um **Sistema de Gerenciamento CRUD** (Create, Read, Update, Delete) simples para uma estrutura universitária. Ele simula o cadastro e a manipulação de Campi, Cursos e Disciplinas utilizando os princípios de **Programação Orientada a Objetos (POO)**.
 
-O sistema inicia sem dados, permitindo que o usuário construa toda a estrutura através de um menu interativo.
+O sistema inicia apenas com o Campus da UFC - Itapajé e seus respectivos cursos, permitindo que o usuário adicione novos campus, cursos e disciplinas através de um menu interativo.
 
 ---
 
