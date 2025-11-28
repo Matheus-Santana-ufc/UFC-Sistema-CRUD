@@ -50,7 +50,11 @@ def main():
         elif opcao == '6':
             nome = input("Nome do Campus a deletar: ")
             sistema.remover_campus(nome)
-
+        elif opcao == '8':
+            campus_alvo = input("Nome do Campus: ")
+            nome_disc = input("Nome da Disciplina: ")
+            horas = input("Carga Horária: ")
+            sistema.adicionar_disciplinas_optativas(campus_alvo, nome_disc,horas)
         elif opcao == '7':
             print("Saindo...")
             break

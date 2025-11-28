@@ -10,7 +10,7 @@ O sistema inicia sem dados, permitindo que o usuário construa toda a estrutura 
 
 ## 📂 Estrutura de Arquivos
 
-O projeto está dividido em main.py e em uma pasta chamada infos, possuindo as classes usadas no sistema em arquivos diferentes.
+O projeto está dividido em main.py e em uma pasta chamada infos, possuindo 2 arquivos contendo Classes, sendo Campus, contendo as classes Campus e Endereço, e Cursos contendo Curso e Disciplina. Por fim o CRUD.py cria a classe CRUD que é responsável pelas funções que o sistema realizará, usando todas as outras classes.
 
 ---
 
@@ -21,7 +21,7 @@ O projeto está dividido em main.py e em uma pasta chamada infos, possuindo as c
 
 ### 1. Certifique‑se de que você está na pasta raiz:
 
-    UFC_CRUD/
+    UFC-Sistema-CRUD/
 
 ### 2. Execute o arquivo principal:
 
