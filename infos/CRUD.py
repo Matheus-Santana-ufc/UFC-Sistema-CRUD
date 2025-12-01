@@ -8,7 +8,7 @@ class CRUD:
         self.campus = []
 
     def criar_campus(self, nome_campus, rua, cidade):
-        novo_endereco = Endereco(rua, cidade, nome_campus, Endereco)
+        novo_endereco = Endereco(rua, cidade)
         novo_campus = Campus(nome_campus, novo_endereco)
         self.campus.append(novo_campus)
         print(f"✅ Campus '{nome_campus}' criado com sucesso!")
@@ -59,6 +59,13 @@ class CRUD:
                     print("      └── (Sem disciplinas)")
                 for disciplina in curso.disciplinas:
                     print(f"      📚 {disciplina}")
+            if campus.disciplinas_optativas:
+                print(f"\n    ⭐ DISCIPLINAS OPTATIVAS ofertadas no Campus {campus.nome}:")
+                for disc_opt in campus.disciplinas_optativas:
+                    print(f"      - {disc_opt}")
+            else:
+                print("    (Nenhuma disciplina optativa cadastrada neste campus)")
+
 
     def atualizar_nome_campus(self, nome_antigo, novo_nome):
         campus = self.buscar_campus(nome_antigo)
