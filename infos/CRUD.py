@@ -1,7 +1,6 @@
-from infos.Campus import Campus
-from infos.Cursos import Curso
-from infos.Campus import Endereco
-from infos.Cursos import Disciplinas
+from infos.Campus import Campus, Endereco
+from infos.Cursos import Curso, Disciplinas, DisciplinasOptativas
+
 
 class CRUD:
     def __init__(self):
@@ -24,9 +23,8 @@ class CRUD:
     def adicionar_disciplinas_optativas(self, nome_campus, nome_disciplina, horas):
         campus = self.buscar_campus(nome_campus)
         if campus:
-            if campus:
-                nova_disciplina = Disciplinas(nome_disciplina, horas)
-                campus.adicionar_disciplinas_optativas(nova_disciplina)
+            nova_optativa = DisciplinasOptativas(nome_disciplina, horas)
+            campus.adicionar_disciplinas_optativas(nova_optativa)
             print(f"✅ Disciplina '{nome_disciplina}' adicionada ao Campus '{nome_campus}'.")
         else:
             print("❌ Curso não encontrado neste campus.")
