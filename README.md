@@ -10,7 +10,7 @@ O sistema inicia apenas com o Campus da UFC - Itapajé e seus respectivos cursos
 
 ## 📂 Estrutura de Arquivos
 
-O projeto está dividido em main.py e em uma pasta chamada infos, possuindo 2 arquivos contendo Classes, sendo Campus, contendo as classes Campus e Endereço, e Cursos contendo Curso e Disciplina. Por fim o CRUD.py cria a classe CRUD que é responsável pelas funções que o sistema realizará, usando todas as outras classes.
+O projeto está dividido em main.py e em uma pasta chamada infos, possuindo 2 arquivos contendo Classes, sendo Campus.py, contendo as classes Campus e Endereço, e Cursos.py contendo Curso, Disciplinas e DisciplinasOptativas que é importado por Campus.py. Por fim o CRUD.py cria a classe CRUD que é responsável pelas funções que o sistema realizará, usando todas as outras classes.
 
 ---
 
