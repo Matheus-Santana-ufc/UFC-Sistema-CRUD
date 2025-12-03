@@ -7,6 +7,9 @@ class CRUD:
         self.campus = []
 
     def criar_campus(self, nome_campus, rua, cidade):
+        if self.buscar_campus(nome_campus):
+            print(f"❌ Erro: Já existe um Campus cadastrado com o nome '{nome_campus}'.")
+            return
         novo_endereco = Endereco(rua, cidade)
         novo_campus = Campus(nome_campus, novo_endereco)
         self.campus.append(novo_campus)
@@ -15,6 +18,10 @@ class CRUD:
     def adicionar_curso_ao_campus(self, nome_campus_alvo, nome_curso):
         campus = self.buscar_campus(nome_campus_alvo)
         if campus:
+            curso_existente = next((c for c in campus.cursos if c.nome == nome_curso), None)
+            if curso_existente:
+                print(f"❌ Erro: O Curso '{nome_curso}' já existe no campus '{campus.nome}'.")
+                return
             novo_curso = Curso(nome_curso)
             campus.adicionar_curso(novo_curso)
             print(f"✅ Curso '{nome_curso}' adicionado ao campus '{campus.nome}'.")
@@ -33,6 +40,10 @@ class CRUD:
         if campus:
             curso_alvo = next((c for c in campus.cursos if c.nome == nome_curso), None)
             if curso_alvo:
+                disc_existente = next((d for d in curso_alvo.disciplinas if d.nome == nome_disciplina), None)
+                if disc_existente:
+                    print(f"❌ Erro: A Disciplina '{nome_disciplina}' já existe no curso '{nome_curso}'.")
+                    return
                 nova_disciplina = Disciplinas(nome_disciplina, horas)
                 curso_alvo.adicionar_disciplina(nova_disciplina)
                 print(f"✅ Disciplina '{nome_disciplina}' adicionada ao curso '{nome_curso}'.")
