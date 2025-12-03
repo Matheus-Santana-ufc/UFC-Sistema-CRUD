@@ -22,8 +22,13 @@ O projeto está dividido em main.py e em uma pasta chamada infos, possuindo 2 ar
 ### 1. Certifique‑se de que você está na pasta raiz:
 
     UFC-Sistema-CRUD/
-
-### 2. Execute o arquivo principal:
+### 2. Certifique‑se de que possui a pasta contendo as classes e funções:
+    infos/
+    -Campus.py
+    -CRUD.py
+    -Curso.py
+    
+### 3. Execute o arquivo principal:
 
     main.py
 
