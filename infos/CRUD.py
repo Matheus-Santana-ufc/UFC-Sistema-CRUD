@@ -79,6 +79,9 @@ class CRUD:
     def atualizar_nome_campus(self, nome_antigo, novo_nome):
         campus = self.buscar_campus(nome_antigo)
         if campus:
+            if self.buscar_campus(novo_nome):
+                print(f"❌ Erro: Já existe um Campus cadastrado com o nome '{novo_nome}'.")
+                return
             campus.nome = novo_nome
             print(f"✅ Campus renomeado para '{novo_nome}'.")
         else:
