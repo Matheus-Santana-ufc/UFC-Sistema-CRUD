@@ -26,7 +26,7 @@ O projeto está dividido em main.py e em uma pasta chamada infos, possuindo 2 ar
     infos/
     -Campus.py
     -CRUD.py
-    -Curso.py
+    -Cursos.py
     
 ### 3. Execute o arquivo principal:
 
